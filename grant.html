@@ -1,0 +1,283 @@
+
+<br>
+<h1 class="grant">Determine Grant Amount</h1>
+
+<div   id="grantForms" ><!-------------  grants forms   grants forms  grants forms  grants forms----------------->
+ 
+ 
+        <div id="dv_npc_s0" > 
+          <FORM id="grant1" class="calc"  name="calc">
+             <FIELDSET>
+                 <LEGEND> Please read    </LEGEND>
+                         <p>
+                                By clicking below, I acknowledge that the estimate provided using this calculator does not represent 
+                                            a final determination, or actual award, of financial assistance, or a final net price; it is an 
+                                            estimate based on price of attendance and financial aid provided to students in a previous year. 
+                                            Price of attendance and financial aid availability change year to year. The estimates shall 
+                                            not be binding on the Secretary of Education, the institution of higher education, or the State. 
+                                            Students must complete the Free Application for Federal Student Aid (FAFSA) in order to be eligible for, 
+                                            and receive, an actual financial aid award that includes Federal grant, loan, or work-study assistance. 
+                                            For more information on applying for Federal student aid, go to <a href="http://www.fafsa.ed.gov/" target="_blank">http://www.fafsa.ed.gov/</a> 
+                          </p>
+ 
+                          <div style="text-align:center; margin-top:30px;margin-bottom:25px;">
+                                <a href="JavaScript:void(0);" onclick="Gostep1(this);"><img src="http://www.gsu.edu/admissions/images/icon_iagree.gif" alt="I Agree" title="I Agree" style="border-width:0px;"/></a>                                        
+                          </div>
+               </FIELDSET>
+               </FORM>
+         </div>       
+ 
+ 
+ 
+ 
+        <div id="dv_npc_s1" style="padding-left:20px;padding-top:15px;display:none;"> 
+          <FORM id="grant2" class="calc"  name="calc2">
+             <FIELDSET>
+                 <LEGEND> Step 1 Determining  dependency    </LEGEND>
+                 <p>The first step in estimating your EFC is determining your dependency status.
+              There are specific criteria that the Department of Education uses 
+              to consider whether a student is dependent or independent.
+               You are considered independent if you meet one or more of the following criteria:  
+         </p>
+              <ul>
+                <li>You were born before January 1, 1989.</li>
+                <li>You are a veteran of the U.S. Armed Forces.</li>
+                <li>You are working on a master's or doctorate program during the 2012-2013 school year.</li>
+                <li>You are married as of the date you apply for aid.</li>
+                <li>You are a ward/dependent of the court, or you were a ward/dependent of the court until age 18.</li>
+                <li>You have legal dependents other than a spouse.</li>
+                <li>You are currently serving on active duty in the U.S. Armed Forces for purposes other than training.</li>
+              </ul>
+              <p>If you do not meet at least one of the criteria above, you are considered dependent for the purposes of federal financial aid.</p>
+                  <legend>Do you meet any of the criteria above?</legend>
+                  <div class="full">
+                    <label for="Dependent">
+                      <input type="radio" name="dependency" value="0" checked style="border: 0px none none">&nbsp;No
+                    </label>
+                    <label for="Independent">
+                      <input type="radio" name="dependency" value="1"  style="border: 0px none none">&nbsp;Yes
+                    </label>
+                    <label for="submit">
+                       <a  onclick="Gostep2();" href="JavaScript:void(0);"><img src="http://www.gsu.edu/admissions/images/icon_continue.gif" border="0" alt="Continue" title="Continue" /></a>
+                    </label>
+                  </div>
+              
+                  </FIELDSET>
+                  </form>
+         </div> 
+         
+         
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+                              
+              <div id="dv_npc_s2" style="padding-left:20px;padding-top:0px;display:none;" > 
+                <FORM id="grant3b" class="calc"  name="calc" action="#" method="post">
+                   <FIELDSET>
+                       <LEGEND> Step 2  (Dependent Student)  </LEGEND>
+                                         <table>
+                                          <tr>
+                                                      <td align="left" valign="top" width="140px" style="padding-bottom:0px;"><span class="title1">Number in Family:</span></td>
+                                                      <td align="left" valign="top" style="padding-left:6px;padding-right:6px;padding-bottom:0px;">
+                                                          <span class="title2">How many people are in your family's household?</span><br />
+                                                          <span style="font-size:10px;line-height:14px;">(Count yourself, your parent(s), and your parents' other children who are under the age of 24.)</span>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td align="left" valign="middle" width="140px" style="font-weight:bold;padding-bottom:0px;">&nbsp;</td>
+                                                      <td align="left" valign="middle" style="padding-top:3px;padding-left:6px;padding-bottom:5px;"><input onKeyUp="numer(this);" id="txt_numberinfamily_dep" type="text" value="" size="6" maxlength="4" /></td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td align="left" valign="top" width="140px" style="padding-bottom:0px;"><span class="title1">Number in College:</span></td>
+                                                      <td align="left" valign="top" style="padding-left:6px;padding-right:6px;padding-bottom:0px;">
+                                                          <span class="title2">Of the number in your family above, how many will be in college next year?</span><br />
+                                                          <span style="font-size:10px;line-height:14px;">(Count yourself and your siblings; do not count your parents.)</span>
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td align="left" valign="middle" width="140px" style="font-weight:bold;padding-bottom:0px;">&nbsp;</td>
+                                                      <td align="left" valign="middle" style="padding-top:3px;padding-left:6px;padding-bottom:5px;"><input onKeyUp="numer(this);" id="txt_numberincollege_dep" type="text" value="" size="6" maxlength="4" /></td>
+                                                  </tr>
+                                                   <tr>
+                                                      <td align="left" valign="top" width="140px"><span class="title1">Parent Income:</span></td>
+                                                      <td align="left" valign="top" style="padding-left:6px;">
+                                                          <span class="title2">What is the income of your parent(s)?</span><br />
+                                                          <ul >
+                                                              <li>Include income from work, child support, and other sources.</li>
+                                                              <li>If your parent is single, separated, or divorced, include the income for the parent with whom you live.</li>
+                                                              <li>If the parent with whom you live is remarried, include both your parent's income and his/her spouse's income.</li>
+                                                          </ul>
+                                                        <select name="rb_parentincome_dep" class="rb_parentincome_dep">
+                                                             <option value="0" selected="selected"> Between $0 - $30,000</option>
+                                                             <option value="1"                    > Between $30,001 - $40,000</option>
+                                                             <option value="2"                    > Between $40,001 - $50,000</option>
+                                                             <option value="3"                    > Between $50,001 - $60,000</option>
+                                                             <option value="4"                    > Between $60,001 - $70,000</option>
+                                                             <option value="5"                    > Between $70,001 - $80,000</option>
+                                                             <option value="6"                    > Between $80,001 - $90,000</option>
+                                                             <option value="7"                    > Between $90,001 - $100,000</option>
+                                                             <option value="8"                    > Above $100,000</option>
+                                                         </select>
+                                                          
+                                                      </td>
+                                                  </tr>
+                                                  <tr>
+                                                      <td align="left" valign="top" width="140px" style="padding-top:10px;"><span class="title1">Student Income:</span></td>
+                                                      <td align="left" valign="top" style="padding-left:6px;padding-top:10px;">
+                                                          <span class="title2">What is your income?</span><br />
+                                                     
+                                                        <select name="rb_applicantincome_dep" class="rb_applicantincome_dep">
+                                                             <option value="0" selected="selected"> $0</option>
+                                                             <option value="1"                    > Between $1 - $5,000</option>
+                                                             <option value="2"                    > Between $5,001 - $10,000</option>
+                                                             <option value="3"                    > Between $10,001 - $30,000</option>
+                                                             <option value="4"                    > Between $30,001 - $50,000</option>
+                                                             <option value="5"                    > Above $50,000</option>
+                                                         </select>
+                                                     
+                                                     
+                                                     
+                                                     
+                                                      </td>
+                                                  </tr>
+                                            
+                                            
+                                                  <tr>
+                                                      <td align="left" valign="top" width="140px" style="font-weight:bold;padding-top:10px;">&nbsp;</td>
+                                                      <td align="left" valign="top" style="padding-left:6px;padding-top:10px;">
+                                                          <a href="javascript:GoPrevious()"><img src="http://www.gsu.edu/admissions/images/icon_previous.gif" border="0" alt="Previous" title="Previous" /></a>
+                                                          &nbsp;&nbsp;
+                                                         <a  onclick="loadGrant(this);" href="JavaScript:void(0);"><img src="http://www.gsu.edu/admissions/images/icon_continue.gif" border="0" alt="Continue" title="Continue" /></a>
+                                                      </td>
+                                                  </tr>
+                                            
+                                          </table>
+                        
+                        
+                        </FIELDSET>
+                </form>
+              </div>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+            <div id="iv_npc_s2" style="padding-left:20px;padding-top:0px;display:none;" > 
+              <FORM id="granti" class="calc"  name="calc" action="#" method="post">
+                 <FIELDSET>
+                     <LEGEND> Step 2   (Independent Student) </LEGEND>
+                                       <table>
+                                       
+                                        <tr>
+                                                    <td align="left" valign="top" width="140px" style="padding-bottom:0px;"><span class="title1">Dependents</span></td>
+                                                    <td align="left" valign="top" style="padding-right:6px;padding-left:6px;padding-bottom:0px;">
+                                                        <span class="title2">Do you have any eligible dependents other than your spouse (where applicable)?</span><br />
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left" valign="middle" width="140px" style="font-weight:bold;padding-bottom:0px;">&nbsp;</td>
+                                                    <td align="left" valign="middle" style="padding-top:3px;padding-left:6px;padding-bottom:15px;">                                            
+                                                        <input type="radio" name="rb_indhasdependents" value="1" />Yes
+                                                        <input type="radio" name="rb_indhasdependents" value="0" />No<br />
+                                                    </td>
+                                                </tr>
+                                                
+                                                
+                                               <tr>
+                                                    <td align="left" valign="top" width="140px" style="padding-bottom:0px;"><span class="title1">Number in Family:</span></td>
+                                                    <td align="left" valign="top" style="padding-right:6px;padding-left:6px;padding-bottom:0px;">
+                                                        <span class="title2">How many people are in your family's household?</span><br />
+                                                        <span style="font-size:10px;line-height:14px;">Count yourself and your spouse (if applicable).</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left" valign="middle" width="140px" style="font-weight:bold;padding-bottom:0px;">&nbsp;</td>
+                                                    <td colspan="2" align="left" valign="middle" style="padding-top:3px;padding-left:6px;padding-right:6px;padding-bottom:15px;"><input onKeyUp="numer(this);" class="numberonly" id="txxxxxxxt_numberincollege_ind" type="text" value="" size="6" maxlength="4" /></td>
+                                                </tr>
+                                                
+                                                
+                                                
+                                                <tr>
+                                                    <td align="left" valign="top" width="140px" style="padding-bottom:0px;"><span class="title1">Number in College:</span></td>
+                                                    <td align="left" valign="top" style="padding-right:6px;padding-left:6px;padding-bottom:0px;">
+                                                        <span class="title2">Of the number of people in your family's household, how many will be in college next year?</span><br />
+                                                        <span style="font-size:10px;line-height:14px;">(Count yourself, your spouse (if applicable), and any children who are under the age of 24.)</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td align="left" valign="middle" width="140px" style="font-weight:bold;padding-bottom:0px;">&nbsp;</td>
+                                                    <td colspan="2" align="left" valign="middle" style="padding-top:3px;padding-left:6px;padding-right:6px;padding-bottom:15px;"><input onKeyUp="numer(this);" class="numberonly" id="txt_numberincollege_ind" type="text" value="" size="6" maxlength="4" /></td>
+                                                </tr>
+                                       
+                                                <tr>
+                                                    <td align="left" valign="top" width="140px"><span class="title1">Household Income:</span></td>
+                                                    <td align="left" valign="top" style="padding-left:6px;">
+                                                        <span class="title2">What is your household income?</span><br />
+                                                        <span style="font-size:10px;line-height:14px;">(Include income from work, child support, and other sources; if you are married, include your spouse's income.)</span><br /><br />
+                                                        
+                                                        <select name="rb_parentincome_ind" class="rb_parentincome_ind">
+                                                             <option value="0" selected="selected"> Between $0 - $30,000</option>
+                                                             <option value="1"                    > Between $30,001 - $40,000</option>
+                                                             <option value="2"                    > Between $40,001 - $50,000</option>
+                                                             <option value="3"                    > Between $50,001 - $60,000</option>
+                                                             <option value="4"                    > Between $60,001 - $70,000</option>
+                                                             <option value="5"                    > Above $70,000</option>
+                                                         </select>
+                                                      <br /><br /> 
+                                                    </td>
+                                                </tr>
+                                               
+                                                <tr>
+                                                    <td align="left" valign="top" width="140px" style="font-weight:bold;">&nbsp;</td>
+                                                    <td align="left" valign="top" style="padding-left:6px;">
+                                                        <a href="javascript:GoPrevious()"><img src="http://www.gsu.edu/admissions/images/icon_previous.gif" border="0" alt="Previous" title="Previous" /></a>
+                                                        &nbsp;&nbsp;
+                                                       <a onclick="loadGrant(this);" href="JavaScript:void(0);"><img src="http://www.gsu.edu/admissions/images/icon_continue.gif" border="0" alt="Continue" title="Continue" /></a>
+                                                    </td>
+                                                </tr>
+                                          
+                                        </table>
+                      
+                      </FIELDSET>
+              </form>
+            </div>
+ 
+ 
+ 
+ 
+               
+         
+         
+         
+                       
+              <div id="results" style="padding-left:20px;padding-top:15px;display:none;" > 
+                <FORM id="grantresults" class="calc"  name="calc">
+                   <FIELDSET>
+                       <LEGEND> Grant     </LEGEND>
+                               <p>
+               <br>
+              <legend>Estimated grant amount :  <b id="grantamount"> </b></legend>
+                                </p>
+ 
+                                <div style="text-align:center; margin-top:30px;margin-bottom:25px;">
+                                      <a href="JavaScript:Gostep2()"><img src="images/icon_previous.gif" alt="Previous" title="Previous" style="border-width:0px;"/></a>                                        
+                                
+                                
+                                                                            &nbsp;&nbsp;
+                               <a  href="JavaScript:void(0);" onclick="loadGrant(this);" ><img src="images/icon_continue.gif" border="0" alt="Continue" title="Continue" /></a>
+ 
+                                </div>
+                     </FIELDSET>
+                     </form>
+               </div>       
+</div><!-------------  grants forms   grants forms  grants forms  grants forms----------------->
+
